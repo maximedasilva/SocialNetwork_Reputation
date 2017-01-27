@@ -1,2 +1,23 @@
 # SocialNetwork_Reputation
-Outil permettant de connaître qui est le politique le plus populaire sur twitter et Google. Projet informatique de 2ème année à l'ENSC, en collaboration avec Quorum
+
+Outil permettant de connaître qui est le politique le plus populaire sur twitter et Google.
+
+Projet informatique de 2ème année à l'ENSC, en collaboration avec Quorum.
+Le but du projet est de créer un outil qui analyse les tweets et les recherches google pour connaître quel homme politique est le plus populaire sur internet.
+
+Réalisation d'une carte interactive de la France avec les données récupérées sur twitter et google trends, ainsi que plusieurs graphiques pour comprendre les élections.
+
+## Installation
+
+Rien n'est spécifié quant à l'Installation
+## Usage
+
+Aucune informations
+## Contributing
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -am 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
+## Credits
+Projet informatique de deuxième année à l'ENSC par [maxime Da Silva]("https://github.com/maximedasilva") en collaboration avec [Quorum]("https://www.quorum-impact.com/")
