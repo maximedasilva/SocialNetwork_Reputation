@@ -21,4 +21,4 @@ Aucune informations
 5. Submit a pull request :D
 
 ## Credits
-Projet informatique de deuxième année à l'ENSC par [maxime Da Silva]("https://github.com/maximedasilva") en collaboration avec [Quorum]("https://www.quorum-impact.com/")
+Projet informatique de deuxième année à l'ENSC par [maxime Da Silva](https://github.com/maximedasilva) en collaboration avec [Quorum](https://www.quorum-impact.com/)
