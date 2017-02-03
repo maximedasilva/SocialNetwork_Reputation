@@ -18,7 +18,7 @@ twitter = Twitter(
 # Twitter API docs:
 # https://dev.twitter.com/docs/api/1/get/search
 #-----------------------------------------------------------------------
-query = twitter.search.tweets(q = "from:EmmanuelMacron")
+query = twitter.search.tweets(q = "#Macron",count="100")
 
 #-----------------------------------------------------------------------
 # How long did this query take?
@@ -31,5 +31,5 @@ print "Search complete (%.3f seconds)" % (query["search_metadata"]["completed_in
 #-----------------------------------------------------------------------
 for result in query["statuses"]:
 	#print "(%s) @%s %s" % (result["created_at"], result["user"]["screen_name"], result["text"])
-    print "%s" %(result)
+    print "%s" %(result["user"]["location"])
 file.close()
