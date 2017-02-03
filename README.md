@@ -20,5 +20,9 @@ Aucune informations
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
+## Dépendances
+Pour que l'application fonctionne correctement, il faut installer plusieurs fonctionnalités:
+1.[API twitter pour python](https://github.com/sixohsix/twitter) (pip install twitter)
+2.[API trends pour python](https://github.com/GeneralMills/pytrends) (pip install pytrends)
 ## Credits
 Projet informatique de deuxième année à l'ENSC par [maxime Da Silva](https://github.com/maximedasilva) en collaboration avec [Quorum](https://www.quorum-impact.com/)
