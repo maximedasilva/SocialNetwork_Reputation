@@ -31,5 +31,5 @@ print "Search complete (%.3f seconds)" % (query["search_metadata"]["completed_in
 #-----------------------------------------------------------------------
 for result in query["statuses"]:
 	#print "(%s) @%s %s" % (result["created_at"], result["user"]["screen_name"], result["text"])
-    print "%s" %(result["user"]["location"])
+    file.write(str.encode(str(result["user"]["location"]),'utf-8'))
 file.close()
