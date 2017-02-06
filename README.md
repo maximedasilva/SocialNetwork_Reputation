@@ -10,7 +10,7 @@ Réalisation d'une carte interactive de la France avec les données récupérée
 Ce projet prend en compte toutes les candidatures à l'élection présidentielle de 2017 selon des mots clés spécifiques (pour twitter).
 
 
-|Droite & extrême droite ||||
+|Droite & extrême droite                                                                    ||||
 |:--------------------------------------------------------------------------------------------:|
 |Mouvance politique     | Parti politique                  | Candidat              | Mots clés |
 |:---------------------:|:--------------------------------:|:---------------------:|-----------|
