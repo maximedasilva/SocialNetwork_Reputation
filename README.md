@@ -21,8 +21,10 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |                       |       Solidarité et progrès      | Jacques Cheminade     |           |
 |                       |     Parti national libéral       | Henry de Lesquen      |           |
 |                       |                                  | Rama Yade             |           |
+|Centre                 |                                  |                       |           |
 |                       |              MoDem               | François Bayrou       |           |
 |                       |           Indépendant            | Jean Lassalle         |           |
+|Gauche & extrême gauche|                                  |                       |           |
 |                       | Mouvement républicain et citoyen | Bastien Faudot        |           |
 |                       | En Marche                        | Emmanuel Macron       |           |
 |                       | Parti Socialiste                 | Benoît Hamon          |           |
