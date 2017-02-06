@@ -9,7 +9,10 @@ Réalisation d'une carte interactive de la France avec les données récupérée
 
 Ce projet prend en compte toutes les candidatures à l'élection présidentielle de 2017 selon des mots clés spécifiques (pour twitter).
 
-|Mouvance politique| Parti politique                  | Candidat              | Mots clés |
+
+|Droite & extrême droite|
+|:--------------------------------------------------------------------------------------------:|
+|Mouvance politique     | Parti politique                  | Candidat              | Mots clés |
 |:---------------------:|:--------------------------------:|:---------------------:|-----------|
 |Droite & extrême droite| Les républicains                 | François Fillon       |           |
 |                       |        Debout la france          | Nicolas Dupont-Aignan |           |
