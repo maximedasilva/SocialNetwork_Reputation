@@ -7,6 +7,29 @@ Le but du projet est de créer un outil qui analyse les tweets et les recherches
 
 Réalisation d'une carte interactive de la France avec les données récupérées sur twitter et google trends, ainsi que plusieurs graphiques pour comprendre les élections.
 
+Ce projet prend en compte toutes les candidatures à l'élection présidentielle de 2017 selon des mots clés spécifiques (pour twitter).
+
+| Parti politique                  | Candidat              | Mots clés |
+|----------------------------------|-----------------------|-----------|
+| Les républicains                 | François Fillon       |           |
+| Debout la france                 | Nicolas Dupont-Aignan |           |
+|                                  | Michèle Alliot-Marie  |           |
+| Union populaire républicaine     | François Asselineau   |           |
+| Front National                   | Marine Le Pen         |           |
+| Solidarité et progrès            | Jacques Cheminade     |           |
+| Parti national libéral           | Henry de Lesquen      |           |
+|                                  | Rama Yade             |           |
+| MoDem                            | François Bayrou       |           |
+| Indépendant                      | Jean Lassalle         |           |
+| Mouvement républicain et citoyen | Bastien Faudot        |           |
+| En Marche                        | Emmanuel Macron       |           |
+| Parti Socialiste                 | Benoît Hamon          |           |
+| Europe écologie les verts        | Yannick Jadot         |           |
+| Le Parti de gauche               | Jean-Luc Mélenchon    |           |
+| Lutte Ouvrière                   | Nathalie Artaud       |           |
+| Nouveau parti Anticapitaliste    | Philippe Poutou       |           |
+|                                  | Charlotte Marchandise |           |
+## Installation
 ## Installation
 
 Rien n'est spécifié quant à l'Installation
