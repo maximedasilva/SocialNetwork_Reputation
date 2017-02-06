@@ -10,29 +10,30 @@ Réalisation d'une carte interactive de la France avec les données récupérée
 Ce projet prend en compte toutes les candidatures à l'élection présidentielle de 2017 selon des mots clés spécifiques (pour twitter).
 
 
-|Mouvance politique     | Parti politique                  | Candidat              | Mots clés |
+|Mouvance politique     | Parti politique/mouvement        | Candidat              | Mots clés |
 |:---------------------:|:--------------------------------:|:---------------------:|-----------|
-|Droite & extrême droite|                                  |                       |           |
-|                       | Les républicains                 | François Fillon       |           |
-|                       |        Debout la france          | Nicolas Dupont-Aignan |           |
-|                       |                                  | Michèle Alliot-Marie  |           |
-|                       |   Union populaire républicaine   | François Asselineau   |           |
-|                       |         Front National           | Marine Le Pen         |           |
-|                       |       Solidarité et progrès      | Jacques Cheminade     |           |
-|                       |     Parti national libéral       | Henry de Lesquen      |           |
-|                       |                                  | Rama Yade             |           |
-|Centre                 |                                  |                       |           |
-|                       |              MoDem               | François Bayrou       |           |
-|                       |           Indépendant            | Jean Lassalle         |           |
-|Gauche & extrême gauche|                                  |                       |           |
-|                       | Mouvement républicain et citoyen | Bastien Faudot        |           |
-|                       | En Marche                        | Emmanuel Macron       |           |
-|                       | Parti Socialiste                 | Benoît Hamon          |           |
-|                       | Europe écologie les verts        | Yannick Jadot         |           |
-|                       | Le Parti de gauche               | Jean-Luc Mélenchon    |           |
-|                       | Lutte Ouvrière                   | Nathalie Artaud       |           |
-|                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |           |
-|                       |                                  | Charlotte Marchandise |           |
+|Droite & extrême droite|                                  |                       |                                                         |
+|                       | Les républicains                 | François Fillon       |    #LR, #lesrepublicains, #Fillon, #FF2017, #fillon2017 |
+|                       |        Debout la france          | Nicolas Dupont-Aignan |    #deboutlafrance,#DLF #DupontAignan, #DA2017          |
+|                       |     Une nouvelle france          | Michèle Alliot-Marie  |    #NouvelleFrance, #alliotMarie                        |
+|                       |   Union populaire républicaine   | François Asselineau   |    #UPR, #Asselineau2017, #FA2017                       |
+|                       |         Front National           | Marine Le Pen         |    #FN, #AuNomDuPeuple, #Marine2017,#lePen              |
+|                       |       Solidarité et progrès      | Jacques Cheminade     |    #JC2017, #Cheminade2017                              |
+|                       |     Parti national libéral       | Henry de Lesquen      |    #lesquen2017                                         |
+|                       |         la france qui ose        | Rama Yade             |    #Rama2017, #LaFranceQuiOse                           |
+|Centre                 |                                  |                       |                                                         |
+|                       |              MoDem               | François Bayrou       |    #bayrou, #MoDem                                      |
+|                       |           Indépendant            | Jean Lassalle         |    #lassalle                                            |
+|Gauche & extrême gauche|                                  |                       |                                                         |
+|                       | Mouvement républicain et citoyen | Bastien Faudot        |    #faudot2017, #mrc                                    |
+|                       | En Marche                        | Emmanuel Macron       |    #macron, #lafranceenmarche, #macron2017              |
+|                       | Parti Socialiste                 | Benoît Hamon          |    #hamon, #hamon, #PS, #PartiSocialiste                |
+|                       | Europe écologie les verts        | Yannick Jadot         |    #jadot, #EELV                                        |
+|                       | Le Parti de gauche               | Jean-Luc Mélenchon    |    #JLM2017, #AvenirEnCommunn, #Melenchon               |
+|                       | Lutte Ouvrière                   | Nathalie Artaud       |    #lutteOuvriere, #artaud                              |
+|                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |    #Poutou, #npa                                        |
+|Inclassable            |                                  |                       |                                                         |
+|                       |                                  | Charlotte Marchandise |                                                         |
 ## Installation
 
 Rien n'est spécifié quant à l'Installation
