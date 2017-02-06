@@ -12,23 +12,23 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |Mouvance politique| Parti politique                  | Candidat              | Mots clés |
 |-----------------------|----------------------------------|-----------------------|-----------|
 |Droite & extrême droite| Les républicains                 | François Fillon       |           |
-||        Debout la france          | Nicolas Dupont-Aignan |           |
-||                                  | Michèle Alliot-Marie  |           |
-||   Union populaire républicaine   | François Asselineau   |           |
-||         Front National           | Marine Le Pen         |           |
-||       Solidarité et progrès      | Jacques Cheminade     |           |
-||     Parti national libéral       | Henry de Lesquen      |           |
-||                                  | Rama Yade             |           |
-||              MoDem               | François Bayrou       |           |
-||           Indépendant            | Jean Lassalle         |           |
-|| Mouvement républicain et citoyen | Bastien Faudot        |           |
-|| En Marche                        | Emmanuel Macron       |           |
-|| Parti Socialiste                 | Benoît Hamon          |           |
-|| Europe écologie les verts        | Yannick Jadot         |           |
-|| Le Parti de gauche               | Jean-Luc Mélenchon    |           |
-|| Lutte Ouvrière                   | Nathalie Artaud       |           |
-|| Nouveau parti Anticapitaliste    | Philippe Poutou       |           |
-||                                  | Charlotte Marchandise |           |
+|                       |        Debout la france          | Nicolas Dupont-Aignan |           |
+|                       |                                  | Michèle Alliot-Marie  |           |
+|                       |   Union populaire républicaine   | François Asselineau   |           |
+|                       |         Front National           | Marine Le Pen         |           |
+|                       |       Solidarité et progrès      | Jacques Cheminade     |           |
+|                       |     Parti national libéral       | Henry de Lesquen      |           |
+|                       |                                  | Rama Yade             |           |
+|                       |              MoDem               | François Bayrou       |           |
+|                       |           Indépendant            | Jean Lassalle         |           |
+|                       | Mouvement républicain et citoyen | Bastien Faudot        |           |
+|                       | En Marche                        | Emmanuel Macron       |           |
+|                       | Parti Socialiste                 | Benoît Hamon          |           |
+|                       | Europe écologie les verts        | Yannick Jadot         |           |
+|                       | Le Parti de gauche               | Jean-Luc Mélenchon    |           |
+|                       | Lutte Ouvrière                   | Nathalie Artaud       |           |
+|                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |           |
+|                       |                                  | Charlotte Marchandise |           |
 ## Installation
 
 Rien n'est spécifié quant à l'Installation
