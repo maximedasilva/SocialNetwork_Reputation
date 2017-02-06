@@ -35,7 +35,7 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |Inclassable            |                                  |                       |                                                         |
 |                       |                                  | Charlotte Marchandise |                                                         |
 ## Installation
-
+ 
 Rien n'est spécifié quant à l'Installation
 ## Usage
 Aucune informations
