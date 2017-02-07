@@ -17,5 +17,4 @@ if __name__=='__main__':
     auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])
     auth.set_access_token(config["access_key"], config["access_secret"])
     stream=Stream(auth,mystream)
-
-    stream.filter(track=['trump'])
+    stream.filter(track=['macron'])
