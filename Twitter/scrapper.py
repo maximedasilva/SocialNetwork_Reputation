@@ -38,5 +38,6 @@ for result in query["statuses"]:
 
 	pass
 	#print "(%s) @%s %s" % (result["created_at"], result["user"]["screen_name"], result["text"])
+    file.write(str.encode(str(result["user"]["location"]),'utf-8'))
 
 file.close()
