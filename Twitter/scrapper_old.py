@@ -1,17 +1,21 @@
-import tweepy
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
 
-auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
+config = {}
+execfile("config.py", config)
 #print(api.me().name)
-file= open("file.json","w")
+class stdOutListener(StreamListener):
+    def on_data(self, data):
+        print data
+        return True
 
+    def on_error(self,status):
+        print status
+if __name__=='__main__':
+    mystream=stdOutListener()
+    auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])
+    auth.set_access_token(config["access_key"], config["access_secret"])
+    stream=Stream(auth,mystream)
 
-# If the application settings are set for "Read and Write" then
-# this line should tweet out the message to your account's
-# timeline. The "Read and Write" setting is on https://dev.twitter.com/apps
-#api.update_status(status='Updating using OAuth authentication via Tweepy!')
-for tweet in tweepy.Cursor(api.search, q="#macron", lang="fr").items(1):
-    file.write(str(tweet))
-#for tweet in tweepy.Cursor(api.search, q="#macron", lang="fr").items():
-file.close()
+    stream.filter(track=['trump'])
