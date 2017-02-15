@@ -36,9 +36,12 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 
 ## Installation
 
-Rien n'est spécifié quant à l'Installation
+Pour installer l'application il suffit de cloner le repo `git clone https://github.com/maximedasilva/SocialNetwork_Reputation.git`.
+Attention aux dépendances (cf partie dépendance du readme).
+
 ## Usage
-Aucune informations
+Et lancer la recherche par le fichier scrapper.py, la représentation graphique n'étant pas développée à l'heure actuelle.
+
 
 
 ## Contributing
@@ -51,7 +54,7 @@ Aucune informations
 ## Dépendances
 Pour que l'application fonctionne correctement, il faut installer plusieurs fonctionnalités:
 
-1. [API twitter pour python](https://github.com/sixohsix/twitter) (pip install twitter)
+1. [API Tweepy pour Python](https://github.com/tweepy/tweepy) (pip install tweepy) La documentation complète est accessible sur [ce site](http://tweepy.readthedocs.io/en/v3.5.0/) .
 2. [API trends pour python](https://github.com/GeneralMills/pytrends) (pip install pytrends)
 
 ## Credits

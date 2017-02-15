@@ -1,43 +1,32 @@
-from twitter import *
+from tweepy.streaming import StreamListener
+from tweepy import OAuthHandler
+from tweepy import Stream
+import json
 import csv
-
-#-----------------------------------------------------------------------
-# load our API credentials
-#-----------------------------------------------------------------------
+import sys
 config = {}
 execfile("config.py", config)
-myfile="macron.csv"
-file=open(myfile,"wb")
-
-#-----------------------------------------------------------------------
-# create twitter API object
-#-----------------------------------------------------------------------
-twitter = Twitter(
-		        auth = OAuth(config["access_key"], config["access_secret"], config["consumer_key"], config["consumer_secret"]))
+#print(api.me().name)
+_cpt=1
+myfile="scrap.csv"
+file=open(myfile,"ab")
+fieldnames = ['candidate', 'coordinates','place']
+writer = csv.DictWriter(file, fieldnames=fieldnames)
 
 
-#-----------------------------------------------------------------------
-# perform a basic search
-# Twitter API docs:
-# https://dev.twitter.com/docs/api/1/get/search
-#-----------------------------------------------------------------------
-query = twitter.search.tweets(q = "#macron",count="100",result_type="recent")
 
-#-----------------------------------------------------------------------
-# How long did this query take?
-#-----------------------------------------------------------------------
-file = open("file.json","w")
-print "Search complete (%.3f seconds)" % (query["search_metadata"]["completed_in"])
-
-#-----------------------------------------------------------------------
-# Loop through each of the results, and print its content.
-#-----------------------------------------------------------------------
-for result in query["statuses"]:
-	if str(result["user"]["geo_enabled"]) in ['True','true']:
-		print "%s" %(result["user"]["location"])
-
-	pass
-	#print "(%s) @%s %s" % (result["created_at"], result["user"]["screen_name"], result["text"])
-    file.write(str.encode(str(result["user"]["location"]),'utf-8'))
-
-file.close()
+class stdOutListener(StreamListener):
+    print str(_cpt)
+    _cpt=_cpt+1
+    def on_status(self, status):
+        writer.writerow({'candidate': 'macron', 'coordinates': status.coordinates,'place':status.place.country_code })
+        return True
+    def on_error(self,status):
+        print status
+if __name__=='__main__':
+    _cpt=1
+    mystream=stdOutListener()
+    auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])
+    auth.set_access_token(config["access_key"], config["access_secret"])
+    stream=Stream(auth,mystream)
+    stream.filter(locations=[-4.9,42.43,51.6,90])
