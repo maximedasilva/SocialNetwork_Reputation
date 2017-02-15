@@ -2,22 +2,24 @@ from tweepy.streaming import StreamListener
 from tweepy import OAuthHandler
 from tweepy import Stream
 import json
+import csv
 import sys
 config = {}
 execfile("config.py", config)
 #print(api.me().name)
 _cpt=1
-myfile="file.json"
+myfile="scrap.csv"
 file=open(myfile,"ab")
+fieldnames = ['candidate', 'coordinates','place']
+writer = csv.DictWriter(file, fieldnames=fieldnames)
+
+
 
 class stdOutListener(StreamListener):
     print str(_cpt)
     _cpt=_cpt+1
     def on_status(self, status):
-        #print(status.text)
-        if(status.coordinates!="None"):
-            #print status.coordinates
-            print status.place
+        writer.writerow({'candidate': 'macron', 'coordinates': status.coordinates,'place':status.place.country_code})
         return True
     def on_error(self,status):
         print status
