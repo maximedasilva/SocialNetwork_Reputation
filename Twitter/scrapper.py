@@ -17,6 +17,25 @@ file=open(myfile,"ab")
 fieldnames = ['candidate','placeName','place','date']
 writer = csv.DictWriter(file, fieldnames=fieldnames)
 
+fillon=["#LR","#LESREPUBLICAINS","#FILLON","#FF2017","#FILLON2017"]
+dupontaignan=["#DEBOUTLAFRANCE","#DLF","#DUPONTAIGNAN","#DA2017"]
+alliotMarie=["#NOUVELLEFRANCE", "#ALLIOTMARIE"]
+asselineau=["#UPR", "#ASSELINEAU2017", "#FA2017"]
+lepen=["#FN", "#AUNOMDUPEUPLE", "#MARINE2017","#LEPEN"]
+cheminade=["#JC2017", "#CHEMINADE2017"]
+lesquen=["#LESQUEN2017", "#LESQUEN"]
+yade=["#RAMA2017", "#LAFRANCEQUIOSE"]
+bayrou=["#BAYROU", "#MODEM"]
+lassalle=["#LASSALLE"]
+faudot=["#FAUDOT2017", "#MRC"]
+macron=["#MACRON", "#LAFRANCEENMARCHE", "#MACRON2017"]
+hamon=["#HAMON", "#HAMON", "#PS", "#PARTISOCIALISTE"]
+jadot=["#JADOT", "#EELV"]
+melenchon=["#JLM2017", "#AVENIRENCOMMUNN", "#MELENCHON"]
+artaud=["#LUTTEOUVRIERE", "#ARTAUD"]
+poutou=["#POUTOU", "#NPA"]
+marchandise=["#BONNESEVOLUTIONS2017", "#VOIECITOYENNE","#ARCHIPELCITOYEN"]
+
 
 
 class stdOutListener(StreamListener):
@@ -24,9 +43,65 @@ class stdOutListener(StreamListener):
     _cpt=_cpt+1
     def on_status(self, status):
         if status.place!=None and status.place.country_code=="FR":
-            if ["LR","LesRepublicains","Fillon","FF2017","fillon2017"] in status.text:
-                writer.writerow({'candidate': 'fillon', 'placeName': status.place.name,'place':status.place.coordinates,'date':status.created_at})
-        return True
+
+
+            fillon_match = [True for match in fillon if match in status.text.upper()]
+            dupontAignan_match = [True for match in dupontaignan if match in status.text.upper()]
+            alliotMarie_match = [True for match in alliotMarie if match in status.text.upper()]
+            asselineau_match = [True for match in asselineau if match in status.text.upper()]
+            lepen_match = [True for match in lepen if match in status.text.upper()]
+            cheminade_match = [True for match in cheminade if match in status.text.upper()]
+            lesquen_match = [True for match in lesquen if match in status.text.upper()]
+            yade_match = [True for match in yade if match in status.text.upper()]
+            bayrou_match = [True for match in bayrou if match in status.text.upper()]
+            lassalle_match = [True for match in lassalle if match in status.text.upper()]
+            faudot_match = [True for match in faudot if match in status.text.upper()]
+            macron_match = [True for match in macron if match in status.text.upper()]
+            hamon_match = [True for match in hamon if match in status.text.upper()]
+            jadot_match = [True for match in jadot if match in status.text.upper()]
+            melenchon_match = [True for match in melenchon if match in status.text.upper()]
+            artaud_match = [True for match in artaud if match in status.text.upper()]
+            poutou_match = [True for match in poutou if match in status.text.upper()]
+            marchandise_match = [True for match in marchandise if match in status.text.upper()]
+
+
+
+            if True in fillon_match:
+                writer.writerow({'candidate': 'fillon', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in dupontAignan_match:
+                writer.writerow({'candidate': 'dupontAignan', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in alliotMarie_match:
+                writer.writerow({'candidate': 'Alliot-Marie', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in asselineau_match:
+                writer.writerow({'candidate': 'Asselineau', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in cheminade_match:
+                writer.writerow({'candidate': 'Cheminade', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in lesquen_match:
+                writer.writerow({'candidate': 'De Lesquen', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in yade_match:
+                writer.writerow({'candidate': 'Yade', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in bayrou_match:
+                writer.writerow({'candidate': 'Bayrou', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in lassalle_match:
+                writer.writerow({'candidate': 'Lassalle', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in faudot_match:
+                writer.writerow({'candidate': 'Faudot', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in macron_match:
+                writer.writerow({'candidate': 'Macron', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in hamon_match:
+                writer.writerow({'candidate': 'Hamon', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in jadot_match:
+                writer.writerow({'candidate': 'Jadot', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in melenchon_match:
+                writer.writerow({'candidate': 'Melenchon', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in artaud_match:
+                writer.writerow({'candidate': 'Artaud', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in poutou_match:
+                writer.writerow({'candidate': 'Poutou', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in marchandise_match:
+                writer.writerow({'candidate': 'Marchandise', 'placeName': status.place.name,'place': status.place.bounding_box.coordinates,'date':status.created_at})
+
+            return True
     def on_error(self,status):
         print status
 if __name__=='__main__':
@@ -35,7 +110,7 @@ if __name__=='__main__':
     auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])
     auth.set_access_token(config["access_key"], config["access_secret"])
     stream=Stream(auth,mystream)
-    stream.filter(track=["LR","LesRepublicains","Fillon","FF2017","fillon2017",#François Fillon
+    stream.filter(track=["#LR","#LesRepublicains","#Fillon","#FF2017","#fillon2017",#François Fillon
     "#deboutlafrance","#DLF","#DupontAignan","#DA2017",#Nicolas Dupont-Aignan
     "#NouvelleFrance", "#alliotMarie",#Michèle Alliot-Marie
     "#UPR", "#Asselineau2017", "#FA2017",#François Asselineau
