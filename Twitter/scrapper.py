@@ -10,7 +10,6 @@ import sys
 # -*-coding:Latin-1 -*
 config = {}
 execfile("config.py", config)
-#print(api.me().name)
 _cpt=1
 myfile="scrap.csv"
 file=open(myfile,"ab")
@@ -31,7 +30,7 @@ faudot=["#FAUDOT2017", "#MRC","FAUDOT"]
 macron=["#MACRON", "#LAFRANCEENMARCHE", "#MACRON2017","MACRON"]
 hamon=["#HAMON", "#HAMON", "#PS", "#PARTISOCIALISTE","HAMON"]
 jadot=["#JADOT", "#EELV","JADOT"]
-melenchon=["#JLM2017", "#AVENIRENCOMMUNN", "#MELENCHON","MELENCHON"]
+melenchon=["#JLM2017", "#AVENIRENCOMMUNN", "#MELENCHON","MELENCHON","MÉLENCHON".decode("utf-8")]
 artaud=["#LUTTEOUVRIERE", "#ARTAUD","ARTAUD"]
 poutou=["#POUTOU", "#NPA","POUTOU"]
 marchandise=["#BONNESEVOLUTIONS2017", "#VOIECITOYENNE","#ARCHIPELCITOYEN"]
@@ -72,6 +71,8 @@ class stdOutListener(StreamListener):
                 writer.writerow({'candidate': 'dupontAignan', 'placeName': status.place.name.encode('utf8') ,'place': status.place.bounding_box.coordinates,'date':status.created_at})
             if True in alliotMarie_match:
                 writer.writerow({'candidate': 'Alliot-Marie', 'placeName': status.place.name.encode('utf8'),'place': status.place.bounding_box.coordinates,'date':status.created_at})
+            if True in lepen_match:
+                writer.writerow({'candidate': 'Le pen', 'placeName': status.place.name.encode('utf8'),'place': status.place.bounding_box.coordinates,'date':status.created_at})
             if True in asselineau_match:
                 writer.writerow({'candidate': 'Asselineau', 'placeName': status.place.name.encode('utf8'),'place': status.place.bounding_box.coordinates,'date':status.created_at})
             if True in cheminade_match:
@@ -124,7 +125,7 @@ if __name__=='__main__':
     "#macron", "#lafranceenmarche", "#macron2017","macron",#Emmanuel Macron
     "#hamon", "#hamon", "#PS", "#PartiSocialiste","Hamon",#Benoît Hamon
     "#jadot", "#EELV","jadot",#Yannick Jadot
-    "#JLM2017", "#AvenirEnCommunn", "#Melenchon","melenchon",#Jean-Luc Mélenchon
+    "#JLM2017", "#AvenirEnCommunn", "#Melenchon","melenchon","mélenchon".decode("utf-8"),#Jean-Luc Mélenchon
     "#lutteOuvriere", "#artaud","artaud",#Nathalie Artaud
     "#Poutou", "#npa","poutou",#	Philippe Poutou
     "#BonnesEvolutions2017", "#VoieCitoyenne","#ArchipelCitoyen"])#Charlotte Marchandise
