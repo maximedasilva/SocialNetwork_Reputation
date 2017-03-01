@@ -1,3 +1,5 @@
 Twitter/accessCode.txt
 Twitter/config.py
 Trends/config.py
+*.txt
+Twitter/scrap.csv
