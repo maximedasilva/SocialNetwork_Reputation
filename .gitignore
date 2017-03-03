@@ -3,3 +3,4 @@ Twitter/config.py
 Trends/config.py
 *.txt
 Twitter/scrap.csv
+Data/*.xls

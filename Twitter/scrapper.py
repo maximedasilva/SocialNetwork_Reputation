@@ -42,7 +42,7 @@ class stdOutListener(StreamListener):
     _cpt=_cpt+1
     def on_status(self, status):
         if status.place!=None and status.place.country_code=="FR":
-
+            print status.place.name.encode('utf8')
 
             fillon_match = [True for match in fillon if match in status.text.upper()]
             dupontAignan_match = [True for match in dupontaignan if match in status.text.upper()]
