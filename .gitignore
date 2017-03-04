@@ -2,6 +2,5 @@ Twitter/accessCode.txt
 Twitter/config.py
 Trends/config.py
 CR.txt
-
 Twitter/scrap.csv
-Data/*.xls
+Data/*.csv
