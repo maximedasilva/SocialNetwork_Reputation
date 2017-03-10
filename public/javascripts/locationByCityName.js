@@ -1,5 +1,5 @@
 var fs=require('fs');
-var file=fs.readFile('../../Data/communes.csv', (err, data) => {
+var file=fs.readFile('./Data/communes.csv', (err, data) => {
   if (err) throw err;
   console.log(data);
 });
