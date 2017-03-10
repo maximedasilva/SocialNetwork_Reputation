@@ -7,7 +7,7 @@ var fs=require("fs");
   var lbn=require("../javascripts/locationByCityName.js");
   file.on("data", function(data){
     var locationByCityName=new lbn(data.ville);
-    console.log(locationByCityName.getName());
+    console.log(locationByCityName.getDeptNumber());
     if(cptTab[data.candidat]==undefined)
     cptTab[data.candidat]=1;
   else {
@@ -21,6 +21,6 @@ var fs=require("fs");
  {
      mystring+=i+"= "+cptTab[i]+"\n";
  }
- fs.writeFile("../../Data/TweetsPerCandidates.txt",mystring,function(err){});
+ fs.writeFile("./Data/TweetsPerCandidates.txt",mystring,function(err){});
    console.log("fin");
  });
