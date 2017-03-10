@@ -1,20 +1,39 @@
 var fs=require('fs');
+var i=0;
+var cityTab=new Array();  var file=fs.readFile('./Data/communes.csv', (err, data) => {
+    if (err) throw err;
+    else {
+      console.log(data.code_region)
+        /*cityTab[i]=new Array();
+        cityTab[i][0]=data.code_region;
+        cityTab[i][1]=data.nom_region;
+        cityTab[i][2]=data.numero_departement;
+        cityTab[i][3]=data.nom_departement;
+        cityTab[i][4]=data.nom_commune;
+        cityTab[i][5]=data.latitude;
+        cityTab[i][6]=data.longitude;*/
+    }
+      //console.log(data);
+      i++;
+  });
 var file=fs.readFile('./Data/communes.csv', (err, data) => {
   if (err) throw err;
-  console.log(data);
+
 });
-var locationByCityName;
 function locationByCityName(name)
 {
+
   this.name=name;
   this.dept="";
   this.region="";
   this.deptN=0;
   this.regN=0;
   this.affectArguments();
+
+
 };
 locationByCityName.prototype.affectArguments = function () {
-//ile;
+
 }
 locationByCityName.prototype.getName = function(){
   return this.name;
