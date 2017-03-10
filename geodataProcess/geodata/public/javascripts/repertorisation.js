@@ -4,7 +4,7 @@ var fs=require("fs");
  var file=extension.fromStream(stream, {headers : true});
   var cptTab = new Object();
   console.log("aaa");
-
+  var lbn=require("../javascripts/locationByCityName.js");
   file.on("data", function(data){
     console.log(data);
     if(cptTab[data.candidat]==undefined)
