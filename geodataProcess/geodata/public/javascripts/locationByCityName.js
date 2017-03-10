@@ -1,4 +1,4 @@
-var fs=require('fs');
+/*var fs=require('fs');
 var file=fs.readFile('../../Data/communes.csv', (err, data) => {
   if (err) throw err;
   console.log(data);
@@ -13,5 +13,5 @@ locationByCityName.getName = function()
 {
   console.log(this.name);
 };
-
 module.exports= locationByCityName;
+*/
