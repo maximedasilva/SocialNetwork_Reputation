@@ -1,6 +1,6 @@
 var fs=require("fs");
   var extension = require("fast-csv");
- var stream= fs.createReadStream("../../Twitter/scrap.csv");
+ var stream= fs.createReadStream("./Twitter/scrap.csv");
  var file=extension.fromStream(stream, {headers : true});
   var cptTab = new Object();
   console.log("aaa");

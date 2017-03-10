@@ -58,11 +58,14 @@ Pour la représentation graphique, installez node.js et lancez le sur `geodata/`
 Pour que l'application fonctionne correctement, il faut installer plusieurs fonctionnalités:
 
 1. [API Tweepy pour Python](https://github.com/tweepy/tweepy) (pip install tweepy) La documentation complète est accessible sur [ce site](http://tweepy.readthedocs.io/en/v3.5.0/) .
+
 2. NodeJS et toutes les dépendaces suivante :
 
  * [Turfjs](http://turfjs.org/)
  * [Express](http://expressjs.com/fr/)
  * [pug](https://pugjs.org/api/getting-started.html)
+ * [fast-csv](http://c2fo.io/fast-csv/)
+ * [fs](https://nodejs.org/api/fs.html)
 
 
 3. Remerciement spécial à [data.gouv.fr](https://www.data.gouv.fr/) pour la liste des communes françaises.
