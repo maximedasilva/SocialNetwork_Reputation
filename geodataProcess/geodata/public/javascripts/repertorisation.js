@@ -6,7 +6,8 @@ var fs=require("fs");
   console.log("aaa");
   var lbn=require("../javascripts/locationByCityName.js");
   file.on("data", function(data){
-    console.log(data);
+    var locationByCityName=new lbn(data.ville);
+    console.log(locationByCityName.getName());
     if(cptTab[data.candidat]==undefined)
     cptTab[data.candidat]=1;
   else {

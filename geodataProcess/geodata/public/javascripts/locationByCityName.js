@@ -8,9 +8,8 @@ function locationByCityName(name)
 {
   this.name=name;
 }
-
 locationByCityName.prototype.getName = function()
 {
-  console.log(this.name);
+  return this.name;
 };
 module.exports= locationByCityName;
