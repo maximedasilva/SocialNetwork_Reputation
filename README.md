@@ -40,7 +40,10 @@ Pour installer l'application il suffit de cloner le repo `git clone https://gith
 Attention aux dépendances (cf partie dépendance du readme).
 
 ## Usage
-Et lancer la recherche par le fichier scrapper.py, la représentation graphique n'étant pas développée à l'heure actuelle.
+Lancer la recherche par le fichier scrapper.py
+Un exemple du fichier généré par une recherche est diponible sur `Twitter/scrap.csv`.
+
+Pour la représentation graphique, installez node.js et lancez le sur `geodata/`
 
 
 
@@ -55,7 +58,15 @@ Et lancer la recherche par le fichier scrapper.py, la représentation graphique 
 Pour que l'application fonctionne correctement, il faut installer plusieurs fonctionnalités:
 
 1. [API Tweepy pour Python](https://github.com/tweepy/tweepy) (pip install tweepy) La documentation complète est accessible sur [ce site](http://tweepy.readthedocs.io/en/v3.5.0/) .
-2. [API trends pour python](https://github.com/GeneralMills/pytrends) (pip install pytrends)
+2. NodeJS et toutes les dépendaces suivante :
+
+ * [Turfjs](http://turfjs.org/)
+ * [Express](http://expressjs.com/fr/)
+ * [pug](https://pugjs.org/api/getting-started.html)
+
+
+3. Remerciement spécial à [data.gouv.fr](https://www.data.gouv.fr/) pour la liste des communes françaises.
+
 
 ## Credits
 Projet informatique de deuxième année à l'ENSC par [maxime Da Silva](https://github.com/maximedasilva) en collaboration avec [Quorum](https://www.quorum-impact.com/)

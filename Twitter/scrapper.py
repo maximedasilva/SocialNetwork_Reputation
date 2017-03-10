@@ -101,7 +101,6 @@ class stdOutListener(StreamListener):
                 writer.writerow({'candidate': 'Poutou', 'placeName': status.place.name.encode('utf8'),'place': status.place.bounding_box.coordinates,'date':status.created_at})
             if True in marchandise_match:
                 writer.writerow({'candidate': 'Marchandise', 'placeName': status.place.name.encode('utf8'),'place': status.place.bounding_box.coordinates,'date':status.created_at})
-
             return True
     def on_error(self,status):
         print status

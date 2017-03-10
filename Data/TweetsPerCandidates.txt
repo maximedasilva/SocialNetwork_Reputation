@@ -1,0 +1,16 @@
+fillon= 5471
+Poutou= 24
+Macron= 2723
+Melenchon= 340
+Hamon= 1108
+Bayrou= 299
+Jadot= 35
+dupontAignan= 130
+Le pen= 807
+Asselineau= 42
+Yade= 3
+Cheminade= 30
+De Lesquen= 10
+Artaud= 5
+Alliot-Marie= 3
+Lassalle= 12
