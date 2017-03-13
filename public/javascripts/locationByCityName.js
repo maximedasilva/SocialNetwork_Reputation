@@ -1,28 +1,14 @@
 var fs=require('fs');
-var i=0;
-var cityTab=new Array();  var file=fs.readFile('./Data/communes.csv', (err, data) => {
-    if (err) throw err;
-    else {
-      console.log(data.code_region)
-        /*cityTab[i]=new Array();
-        cityTab[i][0]=data.code_region;
-        cityTab[i][1]=data.nom_region;
-        cityTab[i][2]=data.numero_departement;
-        cityTab[i][3]=data.nom_departement;
-        cityTab[i][4]=data.nom_commune;
-        cityTab[i][5]=data.latitude;
-        cityTab[i][6]=data.longitude;*/
-    }
-      //console.log(data);
-      i++;
-  });
+
+
 var file=fs.readFile('./Data/communes.csv', (err, data) => {
   if (err) throw err;
 
 });
-function locationByCityName(name)
-{
 
+function locationByCityName(name,myTab)
+{
+  this.cityTab=myTab
   this.name=name;
   this.dept="";
   this.region="";
@@ -33,7 +19,21 @@ function locationByCityName(name)
 
 };
 locationByCityName.prototype.affectArguments = function () {
-
+  for(var i=0;i<this.cityTab.length;i++)
+  {
+if(this.cityTab[i]=="Paris")
+{
+  console.log("paris");
+}
+    if(this.name==this.cityTab[i][4])//recuperation nom commune
+    {
+      console.log(this.name+" "+this.cityTab[i][4]);
+      this.dept=this.cityTab[i][3];
+      this.deptN= this.cityTab[i][2];
+      this.region= this.cityTab[i][1];
+      this.regN=this.cityTab[i][0];
+    }
+  }
 }
 locationByCityName.prototype.getName = function(){
   return this.name;
