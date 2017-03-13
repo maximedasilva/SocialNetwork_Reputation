@@ -1,6 +1,6 @@
 {
-  "name": "geodata",
-  "version": "0.0.0",
+  "name": "twelec",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -13,5 +13,21 @@
     "morgan": "~1.7.0",
     "pug": "~2.0.0-beta10",
     "serve-favicon": "~2.3.2"
-  }
+  },
+  "description": "Outil permettant de connaître qui est le politique le plus populaire sur twitter et Google.",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximedasilva/SocialNetwork_Reputation.git"
+  },
+  "keywords": [
+    "twitter"
+  ],
+  "author": "maxime Da Silva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximedasilva/SocialNetwork_Reputation/issues"
+  },
+  "homepage": "https://github.com/maximedasilva/SocialNetwork_Reputation#readme"
 }
