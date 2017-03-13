@@ -27,7 +27,7 @@ if(this.cityTab[i]=="Paris")
 }
     if(this.name==this.cityTab[i][4])//recuperation nom commune
     {
-      console.log(this.name+" "+this.cityTab[i][4]);
+    //  console.log(this.name+" "+this.cityTab[i][4]);
       this.dept=this.cityTab[i][3];
       this.deptN= this.cityTab[i][2];
       this.region= this.cityTab[i][1];
