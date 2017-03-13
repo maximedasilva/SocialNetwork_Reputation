@@ -1,7 +1,7 @@
 var fs=require("fs");
   var extension = require("fast-csv");
- var stream= fs.createReadStream("./Twitter/scrap.csv");
- var cityStream=fs.createReadStream("./Data/communes.csv");
+ var stream= fs.createReadStream("../Twitter/scrap.csv");
+ var cityStream=fs.createReadStream("../Data/communes.csv");
  var cities=extension.fromStream(cityStream, {headers : true, delimiter: ';'});
  var i=0;
  var cityTab=new Array();

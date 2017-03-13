@@ -4,3 +4,7 @@ Trends/config.py
 CR.txt
 Twitter/scrap.csv
 Data/*.csv
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
