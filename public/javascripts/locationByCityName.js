@@ -1,9 +1,6 @@
 var fs=require('fs');
-
-
 var file=fs.readFile('./Data/communes.csv', (err, data) => {
   if (err) throw err;
-
 });
 
 function locationByCityName(name,myTab)
@@ -15,8 +12,6 @@ function locationByCityName(name,myTab)
   this.deptN=0;
   this.regN=0;
   this.affectArguments();
-
-
 };
 locationByCityName.prototype.affectArguments = function () {
   for(var i=0;i<this.cityTab.length;i++)
