@@ -4,7 +4,7 @@ var file=fs.readFile('./Data/communes.csv', (err, data) => {
 });
 
 function locationByCityName(name,myTab,candidate)
-{gi
+{
   this.candidate=candidate
   this.cityTab=myTab;
   this.name=name;
