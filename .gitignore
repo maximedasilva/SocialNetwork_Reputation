@@ -4,3 +4,4 @@ CR.txt
 npm-debug.log
 .DS_Store
 /*.env
+Twitter/config.py
