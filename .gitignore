@@ -1,4 +1,3 @@
-Twitter/accessCode.txt
 Twitter/config.py
 Trends/config.py
 CR.txt
@@ -6,3 +5,4 @@ CR.txt
 npm-debug.log
 .DS_Store
 /*.env
+/Twitter/*.csv
