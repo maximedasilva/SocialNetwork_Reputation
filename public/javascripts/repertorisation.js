@@ -23,8 +23,8 @@ var fs=require("fs");
       var cptTab = new Object();
       var lbn=require("../javascripts/locationByCityName.js");
       file.on("data", function(data){
+        data.position="";
         var locationByCityName=new lbn(data.ville,cityTab);
-    //    console.log(locationByCityName.getDeptNumber());
         if(cptTab[data.candidat]==undefined)
         cptTab[data.candidat]=1;
       else {

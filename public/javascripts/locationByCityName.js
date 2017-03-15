@@ -14,20 +14,19 @@ function locationByCityName(name,myTab)
   this.affectArguments();
 };
 locationByCityName.prototype.affectArguments = function () {
-  for(var i=0;i<this.cityTab.length;i++)
+  var i =0;
+  var found=false;
+  while(i<this.cityTab.length && !found)
   {
-if(this.cityTab[i]=="Paris")
-{
-  console.log("paris");
-}
     if(this.name==this.cityTab[i][4])//recuperation nom commune
     {
-    //  console.log(this.name+" "+this.cityTab[i][4]);
       this.dept=this.cityTab[i][3];
       this.deptN= this.cityTab[i][2];
       this.region= this.cityTab[i][1];
       this.regN=this.cityTab[i][0];
+      found=true;
     }
+    i++;
   }
 }
 locationByCityName.prototype.getName = function(){
