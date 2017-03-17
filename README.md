@@ -66,6 +66,7 @@ Pour que l'application fonctionne correctement, il faut installer plusieurs fonc
  * [pug](https://pugjs.org/api/getting-started.html)
  * [fast-csv](http://c2fo.io/fast-csv/)
  * [fs](https://nodejs.org/api/fs.html)
+ * [node-json-db](https://www.npmjs.com/package/node-json-db)
 
 
 3. Remerciement spécial à [data.gouv.fr](https://www.data.gouv.fr/) pour la liste des communes françaises.
