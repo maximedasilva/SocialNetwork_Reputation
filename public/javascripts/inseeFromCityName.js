@@ -9,7 +9,7 @@ function locationByCityName(name, myTab, candidate) {
     this.candidate = candidate
     this.cityTab = myTab;
     this.name = name;
-    this.INSEE = 0;
+    this.insee = 0;
     this.affectArguments();
 };
 locationByCityName.prototype.affectArguments = function() {
@@ -17,11 +17,15 @@ locationByCityName.prototype.affectArguments = function() {
     var found = false;
     while (i < this.cityTab.length && !found) {
         if (this.name == this.cityTab[i][2]) { //recuperation nom commune
-            this.INSEE = this.cityTab[i][1];
-            found = true; 
-            console.log(this.INSEE);
+            this.insee = this.cityTab[i][1];
+            found = true;
         }
         i++;
     }
 }
+locationByCityName.prototype.getInsee=function()
+{
+  return this.insee;
+}
+
 module.exports = locationByCityName;
