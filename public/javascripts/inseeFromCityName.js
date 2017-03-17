@@ -1,4 +1,5 @@
 var fs = require('fs');
+var json=require('jsonfile');
 var file = fs.readFile('./Data/communes.csv', (err, data) => {
     if (err)
         throw err;
@@ -36,6 +37,6 @@ locationByCityName.prototype.getDate = function () {
   return this.date;
 }
 locationByCityName.prototype.writeData = function () {
-  
+
 }
 module.exports = locationByCityName;
