@@ -1,6 +1,7 @@
 var fs = require("fs");
 var extension = require("fast-csv");
 var stream = fs.createReadStream("./Twitter/scrap.csv");
+var cptTest=1;
 var cityStream = fs.createReadStream("./Data/communes.csv");
 var cities = extension.fromStream(cityStream, {
     headers: true,
@@ -20,7 +21,9 @@ cities.on("end", function() {
     var cptTab = new Object();
     var lbn = require("../javascripts/inseeFromCityName.js");
     file.on("data", function(data) {
-      var locationByCityName = new lbn(data.ville, cityTab, data.candidat);
+      var locationByCityName = new lbn(data.ville, cityTab,data.candidat,cptTest);
+      cptTest++;
+      locationByCityName.writeData();
         inseeTab.push(locationByCityName);
         if (cptTab[data.candidat] == undefined)
             cptTab[data.candidat] = 1;
@@ -34,6 +37,7 @@ cities.on("end", function() {
             mystring += i + "= " + cptTab[i] + "\n";
         }
         fs.writeFile("./Data/TweetsPerCandidates.txt", mystring, function(err) {});
+
         console.log("fin");
       });
 })

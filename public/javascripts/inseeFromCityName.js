@@ -1,17 +1,17 @@
 var fs = require('fs');
-var json=require('jsonfile');
+var jsondb=require('node-json-db');
 var file = fs.readFile('./Data/communes.csv', (err, data) => {
     if (err)
         throw err;
     }
 );
 
-function locationByCityName(name, myTab, date,candidate) {
+function locationByCityName(name, myTab,candidate,nLine) {
     this.candidate = candidate
     this.cityTab = myTab;
     this.name = name;
-    this.date=date;
-    this.insee = 0;
+    this.insee = 1;
+    this.nLine=nLine;
     this.affectArguments();
 };
 locationByCityName.prototype.affectArguments = function() {
@@ -37,6 +37,16 @@ locationByCityName.prototype.getDate = function () {
   return this.date;
 }
 locationByCityName.prototype.writeData = function () {
+  var db = new jsondb("./Data/condensedData", true, false);
+  if(this.insee==1 && this.name!="France")
+  {
+    console.log(this.nLine+" "+this.name+" "+this.insee);
+  }
+  if(this.name==="France")
+  {
 
+  }
+  //else
+db.push("/"+this.insee,this.name);
 }
 module.exports = locationByCityName;
