@@ -35,4 +35,7 @@ locationByCityName.prototype.getCandidate=function()
 locationByCityName.prototype.getDate = function () {
   return this.date;
 }
+locationByCityName.prototype.writeData = function () {
+  
+}
 module.exports = locationByCityName;

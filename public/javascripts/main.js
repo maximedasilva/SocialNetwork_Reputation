@@ -9,7 +9,6 @@ var cities = extension.fromStream(cityStream, {
 var i = 0;
 var cityTab = new Array();
 var inseeTab=new Array();
-var isReadEnd=false;
 cities.on("data", function(data) {
     cityTab[i] = new Array();
     cityTab[i][1] = data.code_insee;
@@ -36,7 +35,5 @@ cities.on("end", function() {
         }
         fs.writeFile("./Data/TweetsPerCandidates.txt", mystring, function(err) {});
         console.log("fin");
-        isReadEnd=true;
-        console.log(inseeTab[1].getInsee())
-    });
+      });
 })
