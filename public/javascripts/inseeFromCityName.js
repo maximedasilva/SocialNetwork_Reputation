@@ -5,10 +5,11 @@ var file = fs.readFile('./Data/communes.csv', (err, data) => {
     }
 );
 
-function locationByCityName(name, myTab, candidate) {
+function locationByCityName(name, myTab, date,candidate) {
     this.candidate = candidate
     this.cityTab = myTab;
     this.name = name;
+    this.date=date;
     this.insee = 0;
     this.affectArguments();
 };
@@ -27,5 +28,11 @@ locationByCityName.prototype.getInsee=function()
 {
   return this.insee;
 }
-
+locationByCityName.prototype.getCandidate=function()
+{
+  return this.candidate;
+}
+locationByCityName.prototype.getDate = function () {
+  return this.date;
+}
 module.exports = locationByCityName;
