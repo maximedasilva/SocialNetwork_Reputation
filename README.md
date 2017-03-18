@@ -32,7 +32,11 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |                       | Lutte Ouvrière                   | Nathalie Artaud       |    `#lutteOuvriere, #artaud`                              |
 |                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |    `#Poutou, #npa`                                        |
 |Inclassable            |                                  |                       |                                                           |
-|                       |                                  | <span style="color:blue">Charlotte Marchandise</span> |  `#BONNESEVOLUTIONS2017`,`#VOIECITOYENNE`,`#ARCHIPELCITOYEN`                                                       |
+|                       |                                  |
+``` diff
+Charlotte Marchandise |  `#BONNESEVOLUTIONS2017`,`#VOIECITOYENNE`,`#ARCHIPELCITOYEN`                                                       |
+```
+
 
 ## Installation
 
