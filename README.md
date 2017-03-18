@@ -32,10 +32,32 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |                       | Lutte Ouvrière                   | Nathalie Artaud       |    `#lutteOuvriere, #artaud`                              |
 |                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |    `#Poutou, #npa`                                        |
 |Inclassable            |                                  |                       |                                                           |
-|                       |                                  |   
+|                       |                                  |  Charlotte marchandise |`"#BONNESEVOLUTIONS2017", "#VOIECITOYENNE","#ARCHIPELCITOYEN"`|
+
+### Mise a jour des candidats du 17 mars après la déposition officielle des candidatures
  ```diff
+
  - Charlotte marchandise
- ``` ||
+ - michèle Alliot-Marie
+ - Henry De Lesquen
+ - Rama Yade
+ - François Bayrou
+ - Bastien Faudot
+ - Yannick Jadot
+ + François Fillon
+ + Nicolas Dupont-Aignan
+ + François Asselineau
+ + Marine Le Pen
+ + Jacques Cheminade
+ + Jean Lassalle
+ + Emmanuel Macron
+ + Benoît Hamon  
+ + Jean-Luc Mélenchon
+ + Nathalie Artaud  
+ + Philippe Poutou   
+
+
+ ```
 
 
 
