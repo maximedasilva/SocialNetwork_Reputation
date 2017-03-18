@@ -47,6 +47,14 @@ locationByCityName.prototype.writeData = function () {
 
   }
   //else
-db.push("/"+this.insee,this.name);
+  try{
+  var data = db.getData("/"+this.insee);
 }
+catch(error)
+{
+  db.push("/"+this.insee,this.candidate);
+}
+
+}
+
 module.exports = locationByCityName;
