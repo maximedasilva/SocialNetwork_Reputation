@@ -32,7 +32,10 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |                       | Lutte Ouvrière                   | Nathalie Artaud       |    `#lutteOuvriere, #artaud`                              |
 |                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |    `#Poutou, #npa`                                        |
 |Inclassable            |                                  |                       |                                                           |
-|                       |                                  |    ```diff - Charlotte marchandise ``` ||
+|                       |                                  |   
+ ```diff
+ - Charlotte marchandise
+ ``` ||
 
 
 
