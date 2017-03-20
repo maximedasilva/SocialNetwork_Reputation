@@ -51,10 +51,10 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
  + Jacques Cheminade
  + Jean Lassalle
  + Emmanuel Macron
- + Benoît Hamon  
+ + Benoît Hamon
  + Jean-Luc Mélenchon
- + Nathalie Artaud  
- + Philippe Poutou   
+ + Nathalie Artaud
+ + Philippe Poutou
 
 
  ```

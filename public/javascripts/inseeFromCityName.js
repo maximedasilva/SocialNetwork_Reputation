@@ -38,23 +38,18 @@ locationByCityName.prototype.getDate = function () {
 }
 locationByCityName.prototype.writeData = function () {
   var db = new jsondb("./Data/condensedData", true, false);
-  if(this.insee==1 && this.name!="France")
+  if(this.insee!=1)
   {
-    console.log(this.nLine+" "+this.name+" "+this.insee);
-  }
-  if(this.name==="France")
-  {
-
-  }
-  //else
   try{
-  var data = db.getData("/"+this.insee);
-}
-catch(error)
-{
-  db.push("/"+this.insee,this.candidate);
-}
-
+    var data = db.getData("/"+this.insee);
+    console.log("already exists");
+    }
+    catch(error)
+    {
+      db.push("/"+this.insee,this.candidate);
+      console.log("new");
+    }
+  }
 }
 
 module.exports = locationByCityName;
