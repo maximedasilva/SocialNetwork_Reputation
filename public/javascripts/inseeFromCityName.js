@@ -41,12 +41,13 @@ locationByCityName.prototype.writeData = function () {
   if(this.insee!=1)
   {
   try{
-    var data = db.getData("/"+this.insee);
+    var data = db.getData("/"+this.insee+"/"+this.candidate);
+    db.push("/"+this.insee+"/"+this.candidate,data+1)
     console.log("already exists");
     }
     catch(error)
     {
-      db.push("/"+this.insee,this.candidate);
+      db.push("/"+this.insee+"/"+this.candidate,1);
       console.log("new");
     }
   }
