@@ -1,6 +1,5 @@
 Trends/config.py
 CR.txt
-/node_modules
 npm-debug.log
 .DS_Store
 /*.env
