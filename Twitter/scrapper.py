@@ -70,6 +70,7 @@ class stdOutListener(StreamListener):
                 writer.writerow({'candidate': 'Artaud', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in poutou_match:
                 writer.writerow({'candidate': 'Poutou', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
+            print status.place.id+' '+status.place.name
             return True
     def on_error(self,status):
         print status
