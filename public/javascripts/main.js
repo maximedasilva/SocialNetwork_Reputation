@@ -7,13 +7,12 @@ var cities = extension.fromStream(cityStream, {
     headers: true,
     delimiter: ';'
 });
-var PythonShell = require('python-shell');
+/*var PythonShell = require('python-shell');
 var pyshell = new PythonShell('./Twitter/launch.py');
-
 pyshell.on('message', function (message) {
 
     console.log(message);
-});
+});*/
 var i = 0;
 var cityTab = new Array();
 var inseeTab=new Array();
