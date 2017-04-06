@@ -24,7 +24,7 @@ lassalle=["#LASSALLE","LASSALLE"]
 macron=["#MACRON", "#LAFRANCEENMARCHE", "#MACRON2017","MACRON"]
 hamon=["#HAMON", "#HAMON", "#PS", "#PARTISOCIALISTE","HAMON"]
 melenchon=["#JLM2017", "#AVENIRENCOMMUNN", "#MELENCHON","MELENCHON","MÉLENCHON".decode("utf-8")]
-artaud=["#LUTTEOUVRIERE", "#ARTAUD","ARTAUD"]
+arthaud=["#LUTTEOUVRIERE", "#ARTHAUD","ARTHAUD"]
 poutou=["#POUTOU", "#NPA","POUTOU"]
 
 
@@ -45,7 +45,7 @@ class stdOutListener(StreamListener):
             macron_match = [True for match in macron if match in status.text.upper()]
             hamon_match = [True for match in hamon if match in status.text.upper()]
             melenchon_match = [True for match in melenchon if match in status.text.upper()]
-            artaud_match = [True for match in artaud if match in status.text.upper()]
+            arthaud_match = [True for match in arthaud if match in status.text.upper()]
             poutou_match = [True for match in poutou if match in status.text.upper()]
 
             if True in fillon_match:
@@ -66,8 +66,8 @@ class stdOutListener(StreamListener):
                 writer.writerow({'candidate': 'Hamon', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in melenchon_match:
                 writer.writerow({'candidate': 'Melenchon', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
-            if True in artaud_match:
-                writer.writerow({'candidate': 'Artaud', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
+            if True in arthaud_match:
+                writer.writerow({'candidate': 'arthaud', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in poutou_match:
                 writer.writerow({'candidate': 'Poutou', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             print status.place.id+' '+status.place.name
@@ -90,5 +90,5 @@ lassalle+
 macron+
 hamon+
 melenchon+
-artaud+
+arthaud+
 poutou)
