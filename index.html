@@ -3,35 +3,76 @@
   <head>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
-   <link rel="stylesheet" href="js/GeoJSON.Style.css"/>
-   <script src="js/GeoJSON.Style.js"></script>
-   <script src="js/GeoJSON.Ajax.js"></script>
-   <script src="js/Control.Layers.argsGeoJSON.js"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/01/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/02/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/03/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/04/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/05/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/06/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/07/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/08/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/09/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/10/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/11/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/12/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/contours/regions-2015/13/departements2.geojson"></script>
-   <script type="text/javascript" language="javascript" src="33.geojson"></script>
+   <script src="js/jquery-3.2.0.min.js"></script>
+   <link rel="stylesheet" href="css/bootstrap-theme.min.css"></link>
+   <link rel="stylesheet" href="css/style.css"></link>
+   <link rel="stylesheet" href="css/bootstrap.min.css"></link>
+   <script src="js/bootstrap.min.js"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/01/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/02/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/03/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/04/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/05/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/06/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/07/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/08/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/09/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/10/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/11/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/12/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/13/departements2.geojson"></script>
+   <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/communes/33.geojson"></script>
 
 
    <title></title>
  </head>
  <body>
-   <div class="">
-     <p>coucou et bienvenenue ici</p>
+  <div class="row">
+   <div class="row background-blue">
+       <div class="col-md-1">
+         <img src="pictures/everybody.png" alt="everybody.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Poutou.png" alt="Poutou.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Artaud.png" alt="Artaud.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Melenchon.png" alt="Melenchon.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Hamon.png" alt="Hamon.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Lassalle.png" alt="Lassalle.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Macron.png" alt="Macron.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Fillon.png" alt="Fillon.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/DupontAignan.png" alt="DupontAignan.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Asselineau.png" alt="Asselineau.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/Cheminade.png" alt="Cheminade.png"/>
+       </div>
+       <div class="col-md-1">
+         <img src="pictures/LePen.png" alt="LePen.png"/>
+       </div>
+    </div>
    </div>
- <div id="mapid" style="Height: 800px;"></div>
+      <div class="row">
+ <div id="mapid" style="Height: 800px;" class="col-md-8"></div>
 
- </div>
+
+</div>
+
  </body>
  <script type="text/javascript">
 
@@ -40,6 +81,19 @@
    id: 'mapbox.streets',
    accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
  }).addTo(mymap);
+ L.geoJSON(regI).addTo(mymap);
+ L.geoJSON(regII).addTo(mymap);
+ L.geoJSON(regIII).addTo(mymap);
+ L.geoJSON(regIV).addTo(mymap);
+ L.geoJSON(regV).addTo(mymap);
+ L.geoJSON(regVI).addTo(mymap);
+ L.geoJSON(regVII).addTo(mymap);
+ L.geoJSON(regVIII).addTo(mymap);
+ L.geoJSON(regIX).addTo(mymap);
+ L.geoJSON(regX).addTo(mymap);
+ L.geoJSON(regXI).addTo(mymap);
+ L.geoJSON(regXII).addTo(mymap);
+ L.geoJSON(regXIII).addTo(mymap);
 L.geoJSON(test).addTo(mymap);
  //L.geoJSON(data).addTo(mymap);
  </script>
