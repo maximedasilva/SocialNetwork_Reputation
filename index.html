@@ -149,9 +149,10 @@
     <div class="row">
         <div id="mapid" style="Height: 800px;" class="col-md-8"></div>
 
-        <button onclick="addreg()" name="test">test</button>
     </div>
 </body>
+<div id="images"></div>
+
 <script type="text/javascript">
     var mymap = L.map('mapid').setView([46.4317, 3.3037], 6);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -159,10 +160,8 @@
         accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
     }).addTo(mymap);
 
-    function addreg() {
-        L.geoJSON(regI).remove();
-    }
-    L.geoJSON(regI).addTo(mymap);
+
+/*    L.geoJSON(regI).addTo(mymap);
     L.geoJSON(regII).addTo(mymap);
     L.geoJSON(regIII).addTo(mymap);
     L.geoJSON(regIV).addTo(mymap);
@@ -175,7 +174,17 @@
     L.geoJSON(regXI).addTo(mymap);
     L.geoJSON(regXII).addTo(mymap);
     L.geoJSON(regXIII).addTo(mymap);
-    L.geoJSON(test).addTo(mymap);
+    L.geoJSON(test).addTo(mymap);*/
+    var myurl="http://localhost:5000/everybody"
+    $.ajax({
+      dataType: "json",
+      url: myurl ,
+      jsonpCallback: 'callback',
+      type: 'GET',
+      success: function (data) {
+        console.log(data);
+    }
+  });
     //L.geoJSON(data).addTo(mymap);
 </script>
 
