@@ -10,20 +10,20 @@
     <link rel="stylesheet" href="css/style.css"></link>
     <link rel="stylesheet" href="css/bootstrap.min.css"></link>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/01/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/02/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/03/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/04/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/05/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/06/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/07/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/08/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/09/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/10/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/11/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/12/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/departements/13/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="nodeJS_App/Data/geodata/communes/33.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/01/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/02/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/03/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/04/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/05/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/06/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/07/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/08/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/09/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/10/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/11/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/12/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/13/departements2.geojson"></script>
+    <script type="text/javascript" language="javascript" src="../Data/geodata/communes/33.geojson"></script>
 
 
     <title></title>
@@ -159,22 +159,6 @@
         id: 'mapbox.streets',
         accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
     }).addTo(mymap);
-
-
-/*    L.geoJSON(regI).addTo(mymap);
-    L.geoJSON(regII).addTo(mymap);
-    L.geoJSON(regIII).addTo(mymap);
-    L.geoJSON(regIV).addTo(mymap);
-    L.geoJSON(regV).addTo(mymap);
-    L.geoJSON(regVI).addTo(mymap);
-    L.geoJSON(regVII).addTo(mymap);
-    L.geoJSON(regVIII).addTo(mymap);
-    L.geoJSON(regIX).addTo(mymap);
-    L.geoJSON(regX).addTo(mymap);
-    L.geoJSON(regXI).addTo(mymap);
-    L.geoJSON(regXII).addTo(mymap);
-    L.geoJSON(regXIII).addTo(mymap);
-    L.geoJSON(test).addTo(mymap);*/
     var myurl="http://localhost:5000/everybody"
     $.ajax({
       dataType: "json",
@@ -183,6 +167,7 @@
       type: 'GET',
       success: function (data) {
         console.log(data);
+        L.geoJSON(data).addTo(mymap);
     }
   });
     //L.geoJSON(data).addTo(mymap);

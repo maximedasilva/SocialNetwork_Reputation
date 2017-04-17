@@ -26,11 +26,16 @@ cities.on("end", function() {
     var file = extension.fromStream(stream, {headers: true});
     var cptTab = new Object();
     var lbn = require("../javascripts/inseeFromCityName.js");
-    file.on("data", function(data) {
+    var locationByCityName = new lbn("", null,"",1);
+    cptTest++;
+    locationByCityName.deleteJson();
+  file.on("data", function(data) {
+
       var locationByCityName = new lbn(data.ville, cityTab,data.candidat,cptTest);
       cptTest++;
+      locationByCityName.affectArguments();
       locationByCityName.writeData();
-        inseeTab.push(locationByCityName);
+
         if (cptTab[data.candidat] == undefined)
             cptTab[data.candidat] = 1;
         else {
