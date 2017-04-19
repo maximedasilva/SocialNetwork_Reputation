@@ -5,25 +5,15 @@
   <meta charset="utf-8" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
     <script src="js/jquery-3.2.0.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap-theme.min.css"></link>
     <link rel="stylesheet" href="css/style.css"></link>
     <link rel="stylesheet" href="css/bootstrap.min.css"></link>
     <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/01/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/02/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/03/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/04/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/05/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/06/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/07/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/08/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/09/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/10/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/11/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/12/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/departements/13/departements2.geojson"></script>
-    <script type="text/javascript" language="javascript" src="../Data/geodata/communes/33.geojson"></script>
+    <script type="text/javascript" src="js/client.js">
+
+    </script>
 
 
     <title></title>
@@ -146,31 +136,16 @@
         </div>
     </div>
       </div>
+
     <div class="row">
-        <div id="mapid" style="Height: 800px;" class="col-md-8"></div>
+      <div id="test" class="col-md-4">
+<canvas id="myChart" width="400" height="400"></canvas>
+      </div>
+        <div id="mymap" class="col-md-8"></div>
 
     </div>
+
 </body>
 <div id="images"></div>
-
-<script type="text/javascript">
-    var mymap = L.map('mapid').setView([46.4317, 3.3037], 6);
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        id: 'mapbox.streets',
-        accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
-    }).addTo(mymap);
-    var myurl="http://localhost:5000/everybody"
-    $.ajax({
-      dataType: "json",
-      url: myurl ,
-      jsonpCallback: 'callback',
-      type: 'GET',
-      success: function (data) {
-        console.log(data);
-        L.geoJSON(data).addTo(mymap);
-    }
-  });
-    //L.geoJSON(data).addTo(mymap);
-</script>
 
 </html>

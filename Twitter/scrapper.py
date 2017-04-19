@@ -53,7 +53,7 @@ class stdOutListener(StreamListener):
             if True in dupontAignan_match:
                 writer.writerow({'candidate': 'dupontAignan', 'placeName': status.place.name.encode('utf8') ,'date':status.created_at})
             if True in lepen_match:
-                writer.writerow({'candidate': 'Le pen', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
+                writer.writerow({'candidate': 'lepen', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in asselineau_match:
                 writer.writerow({'candidate': 'Asselineau', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in cheminade_match:
