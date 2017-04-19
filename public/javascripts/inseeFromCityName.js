@@ -19,13 +19,14 @@ locationByCityName.prototype.affectArguments = function() {
   var i = 0;
   var found = false;
   while (i < this.cityTab.length && !found) {
-    if (this.name == this.cityTab[i][2]) { //recuperation nom commune
-      this.insee = this.cityTab[i][1];
+    if (this.name == this.cityTab[i][1]) { //recuperation nom commune
+      this.insee = this.cityTab[i][0];
+      this.NRegion=this.cityTab[i][2];
+      this.NDept=this.cityTab[i][3];
+      console.log(this.NRegion);
+      this.jsonCity=new jsondb("./Data/geodata/communes/"+this.NDept);
+      this.jsonDept=new jsondb("./Data/geodata/departements/"+this.NRegion+"/departements");
 
-      this.jsonCity=this.cityTab[i][3];
-      this.jsonDept=this.cityTab[i][4];
-      this.NRegion=this.cityTab[i][5];
-      this.NDept=this.cityTab[i][6];
       found = true;
     }
     i++;
@@ -153,6 +154,9 @@ locationByCityName.prototype.writeData = function() {
     }
 
   }
+  this.jsonCity=null;
+  this.jsonDept=null;
+  this.jsonRegion=null;
 }
 
 module.exports = locationByCityName;
