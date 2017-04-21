@@ -1,5 +1,6 @@
 var fs = require('fs');
 var jsondb = require('node-json-db');
+var _ = require('underscore');
 var file = fs.readFile('./Data/communes.csv', (err, data) => {
   if (err)
     throw err;
@@ -23,7 +24,7 @@ locationByCityName.prototype.affectArguments = function() {
       this.insee = this.cityTab[i][0];
       this.NRegion=this.cityTab[i][2];
       this.NDept=this.cityTab[i][3];
-      console.log(this.NRegion);
+  //    console.log(this.NRegion);
       this.jsonCity=new jsondb("./Data/geodata/communes/"+this.NDept);
       this.jsonDept=new jsondb("./Data/geodata/departements/"+this.NRegion+"/departements");
 
@@ -68,8 +69,6 @@ locationByCityName.prototype.deleteJson = function() {
   })}
   catch(error){}
 }
-
-
 locationByCityName.prototype.writeData = function() {
 
   if (this.insee != 1) {
@@ -103,6 +102,15 @@ locationByCityName.prototype.writeData = function() {
       var getDept=0;
       console.log("coucou");
 
+    var t=_.filter( this.jsonCity.getData("/features"), function(item){
+    if (item.properties.insee== this.insee){
+      try{
+       item.properties.candidates[this.candidate]=item.properties.candidates[this.candidate]+1;
+    }
+    catch(error){item.properties.candidates[this.candidate]=1}
+    }
+})
+/*
       while(notFound)
       {
 
@@ -146,14 +154,13 @@ locationByCityName.prototype.writeData = function() {
       }
       catch(error){
         this.jsonCity.push("/features[" + getCity + "]/properties/candidates/" + this.candidate, 1)
-      }
-
-
+      }*/
     }catch(error){
       console.log(error);
     }
 
   }
+
   this.jsonCity=null;
   this.jsonDept=null;
   this.jsonRegion=null;
