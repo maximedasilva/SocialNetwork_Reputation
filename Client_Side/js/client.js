@@ -1,8 +1,9 @@
 //L.geoJSON(data).addTo(mymap);
 
 $(function() {
-  var selection="";
-  var actualZoom="";
+  var selectionDept="";
+  var selectionRegion="";
+  var actualZoom="region";
   var totalCandidate=0;
   var current_Candidate="";
   var colors = {
@@ -64,7 +65,6 @@ $(function() {
               colors.Lassalle.replace(')', ', 0.5)').replace('rgb', 'rgba'),
               colors.Macron.replace(')', ', 0.5)').replace('rgb', 'rgba'),
               colors.fillon.replace(')', ', 0.5)').replace('rgb', 'rgba'),
-
               colors.dupontAignan.replace(')', ', 0.5)').replace('rgb', 'rgba'),
               colors.Asselineau.replace(')', ', 0.5)').replace('rgb', 'rgba'),
               colors.Cheminade.replace(')', ', 0.5)').replace('rgb', 'rgba'),
@@ -146,26 +146,25 @@ $(function() {
     id: 'mapbox.streets',
     accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
   }).addTo(mymap);
-  window.map = function( candidate) {
-    var level="";
+
+
+
+  window.map = function(candidate) {
     var id="";
-    if(mymap.getZoom()>7 && actualZoom=="region" && selection!=""){
+    if(mymap.getZoom()>7 && actualZoom=="region" && selectionRegion!=""){
         actualZoom="departement"
-        id=selection;
-        selection="";
+        id=selectionRegion;
     }
-      else if(mymap.getZoom() >8.5&&actualZoom=="departement"&& selection!=""){
+    else if(mymap.getZoom() >8.5&&actualZoom=="departement"&& selectionDept!=""){
       actualZoom="city";
-      id=selection;
-      selection="";
+      id=selectionDept;
     }
-    else {
+    else if(actualZoom=="region"){
       actualZoom="region";
       id="nothing";
       selection="";
     }
     current_Candidate=candidate;
-    if (mymap) {
       mymap.eachLayer(function(layer) {
         mymap.removeLayer(layer);
       });
@@ -174,7 +173,6 @@ $(function() {
         accessToken: 'pk.eyJ1IjoibWF4aW1lZGFzaWx2YSIsImEiOiJjajBtZmh0NzEwMDByMzJyengxMm9rcjJzIn0.Y_8ayqiCFwUG-oqdyN7fcg'
       }).addTo(mymap);
 
-    }
     var myurl = "http://localhost:5000/"+actualZoom+"/"+id;
     $.ajax({
       dataType: "json",
@@ -204,12 +202,11 @@ $(function() {
               });
               layer.on('click', function() {
                 layer.openPopup();
-                if(actualZoom!='city')
-                {selection=feature.properties.NUMERO;}
+                if(actualZoom=='region')
+                {selectionRegion=feature.properties.NUMERO;}
+                else if(actualZoom=="departement"){selectionDept=feature.properties.NUMERO;}
                   updateStats(feature.properties.candidates);
                 }
-
-
               );
 
             }
