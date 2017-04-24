@@ -35,7 +35,7 @@ cities.on("end", function() {
       console.log(cpt++);
       var locationByCityName = new lbn(data.ville, cityTab,data.candidat,regionJSON);
       locationByCityName.affectArguments();
-      if(cpt>56000)
+      if(cpt>66000)
       {
       locationByCityName.writeData();
     }
