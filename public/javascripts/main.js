@@ -32,15 +32,28 @@ cities.on("end", function() {
     var lbn = require("../javascripts/inseeFromCityName.js");
 
   var cpt=0;
+  var numberTweetJSON=new jsondb("./Data/nbTweetdone", true, false)
+  console.log(regionJSON);
+  console.log(numberTweetJSON);
+  var numberTweet=numberTweetJSON.getData("/number");
   file.on("data", function(data) {
       var date = data.dateheure.substring(0, 10);
       console.log(date);
       console.log(cpt++);
+
+console.log(numberTweet);
+      if(cpt>numberTweet){
       var locationByCityName = new lbn(data.ville, cityTab,data.candidat,regionJSON,date);
       locationByCityName.affectArguments();
 
       locationByCityName.writeData();
 
+      if (cpt%100==0)
+      {
+        numberTweetJSON.push('/number',cpt);
+      }
+
+}
     if(data.candidat=="")
     {
 
@@ -55,6 +68,7 @@ cities.on("end", function() {
         }
     });
     file.on("end", function() {
+      numberTweetJSON.push('/number',cpt);
         var mystring = "";
         for (var i in cptTab) {
             mystring += i + "= " + cptTab[i] + "\n";
