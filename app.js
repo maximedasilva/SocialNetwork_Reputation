@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var region=require('./routes/region');
 var departement=require('./routes/departements');
 var city=require('./routes/city');
+var date=require('./routes/date');
 var javascript = require('./public/javascripts/main');
 var app = express();
 // view engine setup
@@ -28,6 +29,7 @@ app.use('/', index);
 app.use('/region', region);
 app.use('/departement', departement);
 app.use('/city', city);
+app.use('/date',date);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

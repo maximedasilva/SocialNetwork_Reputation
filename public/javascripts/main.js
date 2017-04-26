@@ -30,15 +30,17 @@ cities.on("end", function() {
     var file = extension.fromStream(stream, {headers: true});
     var cptTab = new Object();
     var lbn = require("../javascripts/inseeFromCityName.js");
+
   var cpt=0;
   file.on("data", function(data) {
+      var date = data.dateheure.substring(0, 10);
+      console.log(date);
       console.log(cpt++);
-      var locationByCityName = new lbn(data.ville, cityTab,data.candidat,regionJSON);
+      var locationByCityName = new lbn(data.ville, cityTab,data.candidat,regionJSON,date);
       locationByCityName.affectArguments();
-      if(cpt>76000)
-      {
+
       locationByCityName.writeData();
-    }
+
     if(data.candidat=="")
     {
 
