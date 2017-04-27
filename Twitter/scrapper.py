@@ -8,13 +8,13 @@ import sys
 
 # -*-coding:Latin-1 -*
 config = {}
-execfile("config.py", config)
+execfile("config.py", config)#on recupere les credentials
 _cpt=1
 myfile="scrap.csv"
-file=open(myfile,"ab")
-fieldnames = ['candidate','placeName','date']
+file=open(myfile,"ab")#on prépare le fichier pour l'écriture
+fieldnames = ['candidate','placeName','date']#on affecte les nom de colonne
 writer = csv.DictWriter(file, fieldnames=fieldnames)
-
+#Affectation des mots clés pour chaque candidats
 fillon=["#LR","#LESREPUBLICAINS","#FILLON","#FF2017","#FILLON2017","FILLON"]
 dupontaignan=["#DEBOUTLAFRANCE","#DLF","#DUPONTAIGNAN","#DA2017","DUPONTAIGNAN"]
 asselineau=["#UPR", "#ASSELINEAU2017", "#FA2017","ASSELINEAU"]
@@ -29,11 +29,11 @@ poutou=["#POUTOU", "#NPA","POUTOU"]
 
 
 
-class stdOutListener(StreamListener):
+class stdOutListener(StreamListener):#on lance le listener
     print str(_cpt)
     _cpt=_cpt+1
     def on_status(self, status):
-        if status.place!=None and status.place.country_code=="FR":
+        if status.place!=None and status.place.country_code=="FR":#si on est en france
             print status.place.name.encode('utf8')
 
             fillon_match = [True for match in fillon if match in status.text.upper()]
@@ -48,6 +48,7 @@ class stdOutListener(StreamListener):
             arthaud_match = [True for match in arthaud if match in status.text.upper()]
             poutou_match = [True for match in poutou if match in status.text.upper()]
 
+#on écrit les lifnes pour chaque candidat
             if True in fillon_match:
                 writer.writerow({'candidate': 'fillon', 'placeName': status.place.name.encode('utf8'),'date':status.created_at})
             if True in dupontAignan_match:
@@ -76,11 +77,11 @@ class stdOutListener(StreamListener):
         print status
 if __name__=='__main__':
     _cpt=1
-    mystream=stdOutListener()
-    auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])
+    mystream=stdOutListener()#on affecte le listener
+    auth=OAuthHandler(config["consumer_key"],config["consumer_secret"])#on lui affecte les credentials
     auth.set_access_token(config["access_key"], config["access_secret"])
-    stream=Stream(auth,mystream)
-    stream.filter(track=
+    stream=Stream(auth,mystream)#on crée le stream
+    stream.filter(track=#on affecte les filtres
 fillon+
 dupontaignan+
 asselineau+

@@ -14,25 +14,18 @@ Ce projet prend en compte toutes les candidatures à l'élection présidentielle
 |Droite & extrême droite|                                  |                       |                                                           |
 |                       | Les républicains                 | François Fillon       |    `#LR, #lesrepublicains, #Fillon, #FF2017, #fillon2017` |
 |                       |        Debout la france          | Nicolas Dupont-Aignan |    `#deboutlafrance,#DLF #DupontAignan, #DA2017 `         |
-|                       |     Une nouvelle france          | Michèle Alliot-Marie  |    `#NouvelleFrance, #alliotMarie`                        |
 |                       |   Union populaire républicaine   | François Asselineau   |    `#UPR, #Asselineau2017, #FA2017`                       |
 |                       |         Front National           | Marine Le Pen         |    `#FN, #AuNomDuPeuple, #Marine2017,#lePen`              |
 |                       |       Solidarité et progrès      | Jacques Cheminade     |    `#JC2017, #Cheminade2017`                              |
-|                       |     Parti national libéral       | Henry de Lesquen      |    `#lesquen2017, #lesquen`                               |
-|                       |         la france qui ose        | Rama Yade             |    `#Rama2017, #LaFranceQuiOse`                           |
 |Centre                 |                                  |                       |                                                           |
-|                       |              MoDem               | François Bayrou       |    `#bayrou, #MoDem`                                      |
 |                       |           Indépendant            | Jean Lassalle         |    `#lassalle`                                            |
 |Gauche & extrême gauche|                                  |                       |                                                           |
-|                       | Mouvement républicain et citoyen | Bastien Faudot        |    `#faudot2017, #mrc`                                    |
 |                       | En Marche                        | Emmanuel Macron       |    `#macron, #lafranceenmarche, #macron2017`              |
 |                       | Parti Socialiste                 | Benoît Hamon          |    `#hamon, #hamon, #PS, #PartiSocialiste`                |
-|                       | Europe écologie les verts        | Yannick Jadot         |    `#jadot, #EELV`                                        |
 |                       | Le Parti de gauche               | Jean-Luc Mélenchon    |    `#JLM2017, #AvenirEnCommunn, #Melenchon`               |
 |                       | Lutte Ouvrière                   | Nathalie Artaud       |    `#lutteOuvriere, #artaud`                              |
 |                       | Nouveau parti Anticapitaliste    | Philippe Poutou       |    `#Poutou, #npa`                                        |
-|Inclassable            |                                  |                       |                                                           |
-|                       |                                  |  Charlotte marchandise |`"#BONNESEVOLUTIONS2017", "#VOIECITOYENNE","#ARCHIPELCITOYEN"`|
+
 
 ### Mise a jour des candidats du 17 mars après la déposition officielle des candidatures
  ```diff
