@@ -62,6 +62,7 @@ catch(error){dateJSON.push("/dates/"+this.date+"/"+this.candidate,1);}
           cpt++;
         }
       }
+
       try {
 
         var data = this.jsonRegion.getData("/features[" + cpt + "]/properties/candidates/" + this.candidate);
@@ -97,7 +98,6 @@ catch(error){dateJSON.push("/dates/"+this.date+"/"+this.candidate,1);}
     } catch (error) {
       console.log(error);
     }
-
-  }
+}
 }
 module.exports = locationByCityName;

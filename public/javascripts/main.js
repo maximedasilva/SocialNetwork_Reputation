@@ -35,12 +35,13 @@ cities.on("end", function() {
   var numberTweetJSON=new jsondb("./Data/nbTweetdone", true, false)
   console.log(regionJSON);
   console.log(numberTweetJSON);
-  //var numberTweet=numberTweetJSON.getData("/number");
+  var numberTweet=numberTweetJSON.getData("/number");
   file.on("data", function(data) {
       var date = data.dateheure.substring(0, 10);
       console.log(date);
       console.log(cpt++);
-      if(cpt>66000){
+
+      if(cpt>numberTweet){
       var locationByCityName = new lbn(data.ville, cityTab,data.candidat,regionJSON,date);
       locationByCityName.affectArguments();
 
@@ -48,7 +49,7 @@ cities.on("end", function() {
 
       if (cpt%100==0)
       {
-    //    numberTweetJSON.push('/number',cpt);
+        numberTweetJSON.push('/number',cpt);
       }
 
 }
